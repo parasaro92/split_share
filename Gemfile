@@ -56,3 +56,5 @@ gem 'simple_form'
 gem 'letter_opener'
 
 gem 'font-awesome-rails'
+
+gem 'annotate'

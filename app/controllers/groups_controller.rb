@@ -1,5 +1,4 @@
 class GroupsController < ApplicationController
-  before_action :authenticate_user!
 
   def index
     @group = Group.all
@@ -21,6 +20,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
+    @group_membership = @group.memberships.new
   end
 
 private

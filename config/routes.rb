@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :group_memberships
   resources :groups
   devise_for :users
   # get 'home/land'
