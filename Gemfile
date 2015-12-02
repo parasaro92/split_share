@@ -45,6 +45,14 @@ group :development do
   gem 'spring'
 end
 
+gem 'devise'
+
 gem 'bootstrap-sass'
 
 gem 'bootswatch-rails'
+
+gem 'simple_form'
+
+gem 'letter_opener'
+
+gem 'font-awesome-rails'

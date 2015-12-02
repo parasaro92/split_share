@@ -8,6 +8,13 @@
 </head>
 <body>
 
+<%= render 'layouts/header' %>
+<div class="container">
+  <div class="flash_message">
+    <%= flash_tag(notice, "notice") %>
+    <%= flash_tag(alert, "alert") %>
+  </div>
+</div>
 <%= yield %>
 
 </body>
