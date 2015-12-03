@@ -1,4 +1,5 @@
 class GroupMembershipsController < ApplicationController
+  load_and_authorize_resource
 
   def create
     @group = Group.find(params[:group_membership][:group_id])
@@ -20,7 +21,7 @@ class GroupMembershipsController < ApplicationController
         invited_user.invited_group = @group
         invited_user.save!
         # Remember the user to join the group after adding to group
-        flash[:alert] = "No such user"
+        flash[:notice] = "Invitation sent successfully"
       else
         flash[:alert] = "Please enter proper email address"
       end

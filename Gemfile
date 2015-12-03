@@ -60,3 +60,5 @@ gem 'font-awesome-rails'
 gem 'annotate'
 
 gem 'devise_invitable'
+
+gem 'cancancan'

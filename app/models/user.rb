@@ -23,6 +23,7 @@
 #  invited_by_id          :integer
 #  invited_by_type        :string
 #  invitations_count      :integer          default(0)
+#  invited_group_id       :integer
 #
 
 class User < ActiveRecord::Base
@@ -37,6 +38,10 @@ class User < ActiveRecord::Base
   belongs_to :invited_group, class_name: Group.name 
 
   after_invitation_accepted :join_invited_group
+
+  def is_admin?(grp)
+    grp.admin == self
+  end
 
 private
   def join_invited_group
