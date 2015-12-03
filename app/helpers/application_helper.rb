@@ -10,7 +10,7 @@ module ApplicationHelper
 
     content_tag(:div, class: "alert alert-#{msg_type} alert-dismissible", role: "alert") do |variable|
       button_tag(class: "close", "data-dismiss" => "alert") do
-        content_tag(:span, raw("&times;"), "aria-hidden" => true)
+        content_tag(:span, raw("&times;"), "aria-hidden" => true) 
           content_tag(:span, "Close", class: "sr-only")
       end + msg
     end
