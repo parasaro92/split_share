@@ -2,20 +2,27 @@ class GroupMembershipsController < ApplicationController
 
   def create
     @group = Group.find(params[:group_membership][:group_id])
-    usr = User.find_by(email: params[:group_membership][:email])
+    email = params[:group_membership][:email]
+    usr = User.find_by(email: email)
     if usr
-    begin
-      @group.add(usr)
-    rescue
-      flash[:alert] = "Member is already user"
+      begin
+        @group.add(usr)
+      rescue
+        flash[:alert] = "Member is already user"
+      else
+        # Invite the user
+        # Remember the user to join the group after adding to group
+        flash[:notice] = "Member added successfully"
+      end
     else
-      # Invite the user
-      # Remember the user to join the group after adding to group
-      flash[:notice] = "Member added successfully"
+      if email.match(Devise.email_regexp)
+        User.invite!(:email => email)
+        # Remember the user to join the group after adding to group
+        flash[:alert] = "No such user"
+      else
+        flash[:alert] = "Please enter proper email address"
+      end
     end
-  else
-    flash[:alert] = "No such user"
-  end
     redirect_to @group
   end
 end

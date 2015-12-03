@@ -58,3 +58,5 @@ gem 'letter_opener'
 gem 'font-awesome-rails'
 
 gem 'annotate'
+
+gem 'devise_invitable'
