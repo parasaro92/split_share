@@ -30,4 +30,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :memberships, class_name: GroupMembership.name
+  has_many :groups, through: :memberships        
 end

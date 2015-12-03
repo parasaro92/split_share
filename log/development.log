@@ -8562,3 +8562,285 @@ Processing by GroupsController#show as HTML
   Rendered groups/show.html.erb within layouts/application (5.5ms)
   Rendered layouts/_header.html.erb (0.2ms)
 Completed 200 OK in 164ms (Views: 160.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/4" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" INNER JOIN "group_memberships" ON "users"."id" = "group_memberships"."user_id" WHERE "group_memberships"."group_id" = ?  [["group_id", 4]]
+  Rendered groups/show.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 200ms (Views: 155.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.self-0bcf6dfbfec805bd887c75f2d0a6ac1c3b4a9c0eca3b5136ca76337b96339adc.css?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/group.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/group_memberships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-12-03 11:27:02 +0530
+
+
+Started GET "/users/invitation/accept?invitation_token=6gPFn8Hp2zTc9DTkRc5j" for 127.0.0.1 at 2015-12-03 11:27:12 +0530
+Processing by Devise::InvitationsController#edit as HTML
+  Parameters: {"invitation_token"=>"6gPFn8Hp2zTc9DTkRc5j"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."invitation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["invitation_token", "517c1a4fec2f8825a1ffea7d5429d8237d45425c15567af28e6bb09b834f7644"]]
+Redirected to http://localhost:3000/
+Filter chain halted as :resource_from_invitation_token rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-03 11:27:12 +0530
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "group_memberships" ON "groups"."id" = "group_memberships"."group_id" WHERE "group_memberships"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered groups/_group.html.erb (0.3ms)
+  Rendered groups/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 163ms (Views: 159.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2015-12-03 11:27:26 +0530
+Processing by GroupsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "group_memberships" ON "groups"."id" = "group_memberships"."group_id" WHERE "group_memberships"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered groups/_group.html.erb (0.3ms)
+  Rendered groups/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 158ms (Views: 154.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2015-12-03 11:27:26 +0530
+Processing by GroupsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "group_memberships" ON "groups"."id" = "group_memberships"."group_id" WHERE "group_memberships"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered groups/_group.html.erb (0.3ms)
+  Rendered groups/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 140ms (Views: 136.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/fontawesome-webfont-3c4a1bb7ce3234407184f0d80cc4dec075e4ad616b44dcc5778e1cfb1bc24019.woff2?v=4.4.0" for 127.0.0.1 at 2015-12-03 11:27:27 +0530
+
+
+Started GET "/groups/4" for 127.0.0.1 at 2015-12-03 11:27:29 +0530
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "group_memberships" ON "users"."id" = "group_memberships"."user_id" WHERE "group_memberships"."group_id" = ?  [["group_id", 4]]
+  Rendered groups/show.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 150ms (Views: 146.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/group_memberships" for 127.0.0.1 at 2015-12-03 11:27:49 +0530
+Processing by GroupMembershipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KVz8zE/4r8tnQZ/GskILrXqLoIBGxJGjy57OQbmr+BhdLWmEfdG0jpI9IUd64Fq0jSX+oKdYhgL55R3vHvXY2Q==", "group_membership"=>{"email"=>"jedi@starwars.com", "group_id"=>"4"}, "commit"=>"Add Member"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jedi@starwars.com"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "jedi@starwars.com"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."invitation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["invitation_token", "d5b29c1e06692f9bca88ed78e6192f6fceb417990fcf17b6eda3b981d034876a"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "invitation_token", "invitation_created_at", "invitation_sent_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "jedi@starwars.com"], ["encrypted_password", "$2a$10$XRqN1V1QERsiKddTCu6eJ.qR/IJwMHvIM6ZgRlG/x1CRMVUXWxVR."], ["invitation_token", "d5b29c1e06692f9bca88ed78e6192f6fceb417990fcf17b6eda3b981d034876a"], ["invitation_created_at", "2015-12-03 05:57:49.602667"], ["invitation_sent_at", "2015-12-03 05:57:49.602667"], ["created_at", "2015-12-03 05:57:49.603709"], ["updated_at", "2015-12-03 05:57:49.603709"]]
+  [1m[35m (145.1ms)[0m  commit transaction
+  Rendered /home/paras/.rvm/gems/ruby-2.2.2/gems/devise_invitable-1.5.3/app/views/devise/mailer/invitation_instructions.html.erb (3.3ms)
+
+Devise::Mailer#invitation_instructions: processed outbound mail in 29.8ms
+
+Sent mail to jedi@starwars.com (24.3ms)
+Date: Thu, 03 Dec 2015 11:27:49 +0530
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: jedi@starwars.com
+Message-ID: <565fd9ddbff66_18993fa9e85081fc15076@paras-Inspiron-3542.mail>
+Subject: Invitation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello jedi@starwars.com</p>
+
+<p>Someone has invited you to http://localhost:3000/, you can accept it through the link below.</p>
+
+<p><a href="http://localhost:3000/users/invitation/accept?invitation_token=3quzc1pU_WA913ktKAMX">Accept invitation</a></p>
+
+<p>If you don't want to accept the invitation, please ignore this email.<br />Your account won't be created until you access the link above and set your password.</p>
+
+Redirected to http://localhost:3000/groups/4
+Completed 302 Found in 346ms (ActiveRecord: 146.3ms)
+
+
+Started GET "/groups/4" for 127.0.0.1 at 2015-12-03 11:27:49 +0530
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "group_memberships" ON "users"."id" = "group_memberships"."user_id" WHERE "group_memberships"."group_id" = ?[0m  [["group_id", 4]]
+  Rendered groups/show.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 215ms (Views: 211.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/invitation/accept?invitation_token=3quzc1pU_WA913ktKAMX" for 127.0.0.1 at 2015-12-03 11:28:01 +0530
+Processing by Devise::InvitationsController#edit as HTML
+  Parameters: {"invitation_token"=>"3quzc1pU_WA913ktKAMX"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."invitation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["invitation_token", "d5b29c1e06692f9bca88ed78e6192f6fceb417990fcf17b6eda3b981d034876a"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-03 11:28:01 +0530
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "group_memberships" ON "groups"."id" = "group_memberships"."group_id" WHERE "group_memberships"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered groups/_group.html.erb (0.8ms)
+  Rendered groups/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 150ms (Views: 148.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/groups/4" for 127.0.0.1 at 2015-12-03 11:28:04 +0530
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" INNER JOIN "group_memberships" ON "users"."id" = "group_memberships"."user_id" WHERE "group_memberships"."group_id" = ?  [["group_id", 4]]
+  Rendered groups/show.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 149ms (Views: 146.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/4" for 127.0.0.1 at 2015-12-03 11:28:39 +0530
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.2ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "group_memberships" ON "users"."id" = "group_memberships"."user_id" WHERE "group_memberships"."group_id" = ?[0m  [["group_id", 4]]
+  Rendered groups/show.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 174ms (Views: 168.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-0bcf6dfbfec805bd887c75f2d0a6ac1c3b4a9c0eca3b5136ca76337b96339adc.css?body=1" for 127.0.0.1 at 2015-12-03 11:28:39 +0530
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:39 +0530
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/group.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/group_memberships.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-12-03 11:28:40 +0530
