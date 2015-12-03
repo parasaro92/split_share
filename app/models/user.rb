@@ -32,5 +32,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :memberships, class_name: GroupMembership.name
-  has_many :groups, through: :memberships        
+  has_many :groups, through: :memberships  
+
+  belongs_to :invited_group, class_name: Group.name 
+
+  after_invitation_accepted :join_invited_group
+
+private
+  def join_invited_group
+    self.invited_group.add(self)   
+  end       
 end
